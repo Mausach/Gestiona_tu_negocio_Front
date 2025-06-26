@@ -1,35 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import AppRouter from './routers/Routers'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <AppRouter/>
     </>
   )
 }
 
 export default App
+//Estructura de 5-6 carpetas en src
+//  // aset = logos e imagenes o multimedia// 
+// componentes=elementos que van a estar en toda la ejecucion de la pagina//
+//css=va el css equisde //pages=todas las paginas del sistema o web a desarrollar
+//rutes= aqui definimos las diferentes rutas para las diferentes paginas
+
+//

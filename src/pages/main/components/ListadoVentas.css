@@ -1,0 +1,354 @@
+.gtb-venta-fullscreen-overlay {
+  /* Elimina fondo oscuro y centrado modal */
+  position: static;
+  top: unset;
+  left: unset;
+  width: 100%;
+  height: auto;
+  background: none;
+  z-index: auto;
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+  overflow: visible;
+}
+
+.gtb-venta-fullscreen-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #f5e8d5;
+  z-index: 2000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.gtb-venta-fullscreen-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gtb-venta-fullscreen-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.gtb-venta-fullscreen-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: #e6dbc7;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 28px;
+  color: #2a4d4f;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #d6cbb7;
+  transition: background 0.2s;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gtb-venta-fullscreen-close:hover {
+  background: #d6cbb7;
+}
+
+.gtb-venta-fullscreen-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.gtb-venta-fullscreen-section {
+  width: 100%;
+}
+
+.gtb-venta-modal {
+  max-width: 540px;
+  margin: 48px auto 0 auto;
+  background: #fffbe9;
+  border-radius: 14px;
+  padding: 20px 18px 18px 18px;
+  box-shadow: 0 4px 32px 0 #d6cbb7;
+  border: 1.5px solid #e6dbc7;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  height: auto;
+  overflow-y: visible;
+}
+
+.gtb-venta-agregar-listas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.gtb-venta-agregar-bloque {
+  width: 100%;
+}
+
+.gtb-venta-table-wrap {
+  max-height: 120px;
+  overflow-y: auto;
+  background: #f8f1e5;
+  border-radius: 7px;
+  border: 1px solid #e6dbc7;
+  margin-bottom: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gtb-venta-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  background: transparent;
+  min-width: 320px;
+  table-layout: auto;
+}
+
+.gtb-venta-table th,
+.gtb-venta-table td {
+  padding: 6px 6px;
+  border-bottom: 1px solid #e6dbc7;
+  text-align: left;
+  color: #2c2c2c;
+  background: none;
+  font-weight: 400;
+  word-break: break-word;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gtb-venta-table th {
+  background: #f5e8d5;
+  font-weight: 600;
+  font-size: 0.93rem;
+}
+
+.gtb-venta-table tr:last-child td {
+  border-bottom: none;
+}
+
+.gtb-venta-table button.gtb-btn {
+  min-width: 60px;
+  padding: 4px 0;
+  font-size: 0.93rem;
+  font-weight: 600;
+  border-radius: 7px;
+  margin: 0;
+}
+
+.gtb-venta-total {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 6px 0 0 0;
+  text-align: right;
+}
+
+.gtb-form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.gtb-venta-modal .gtb-btn,
+.gtb-venta-modal .gtb-btn-secondary {
+  font-size: 0.93rem;
+  padding: 6px 0;
+  min-width: 70px;
+}
+
+@media (max-width: 700px) {
+  .gtb-venta-fullscreen-content {
+    max-width: 100vw;
+    padding: 18px 0 12px 0;
+  }
+  .gtb-venta-fullscreen-form {
+    gap: 14px;
+  }
+  .gtb-venta-fullscreen-title {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+  }
+  .gtb-venta-fullscreen-content {
+    border-radius: 0;
+    padding: 0;
+  }
+  .gtb-venta-modal {
+    max-width: 100vw;
+    width: 100vw;
+    min-width: 0;
+    padding: 10px 4vw 12px 4vw;
+    border-radius: 8px;
+    gap: 5px;
+    margin: 24px 0 0 0;
+  }
+  .gtb-venta-agregar-listas {
+    width: 100vw;
+    gap: 6px;
+  }
+  .gtb-venta-agregar-bloque {
+    width: 100vw;
+  }
+  .gtb-venta-table-wrap {
+    max-height: 90px;
+    min-width: 0;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+  .gtb-venta-table {
+    font-size: 0.89rem;
+    min-width: 220px;
+    width: 100%;
+    table-layout: auto;
+  }
+  .gtb-venta-table th,
+  .gtb-venta-table td {
+    padding: 4px 2px;
+    max-width: 90px;
+    font-size: 0.89rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Asegura que el modal nunca se salga de la pantalla */
+@media (max-width: 430px) {
+  .gtb-venta-modal {
+    max-width: 100vw;
+    width: 100vw;
+    padding: 6px 0 6px 0;
+    border-radius: 0;
+  }
+  .gtb-venta-table-wrap {
+    max-height: 90px;
+  }
+}
+
+/* Espaciado interno para el modal de crear venta */
+.gtb-venta-modal {
+  padding: 20px 18px 18px 18px;
+  border-radius: 14px;
+  background: #fffbe9;
+  box-sizing: border-box;
+}
+
+/* Responsive: reduce el padding en móvil */
+@media (max-width: 700px) {
+  .gtb-venta-modal {
+    padding: 10px 4vw 12px 4vw;
+    border-radius: 8px;
+  }
+}
+
+/* Bloquea el scroll y la interacción del fondo cuando el modal está abierto */
+body.gtb-modal-open {
+  overflow: hidden !important;
+  touch-action: none !important;
+  overscroll-behavior: contain !important;
+  position: relative !important;
+  width: 100vw !important;
+}
+/* Bloquea el scroll y la interacción del fondo cuando el modal está abierto */
+body.gtb-modal-open {
+  overflow: hidden !important;
+  touch-action: none !important;
+  overscroll-behavior: contain !important;
+  position: relative !important;
+  width: 100vw !important;
+}
+
+.gtb-btn-quitar-text {
+  display: inline;
+}
+
+.gtb-btn-quitar-x {
+  display: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 10px;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .gtb-btn-quitar-text {
+    display: none;
+  }
+  .gtb-btn-quitar-x {
+    display: inline-block;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0 14px;
+    min-width: 36px;
+    min-height: 36px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Botón "Quitar" del carrito en CrearVentaFullScreen */
+.gtb-btn-quitar {
+  min-width: 80px;
+  padding: 10px 0;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: #e74c3c !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 1px 4px #d6cbb7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: background 0.18s;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+/* Asegura que el texto no se corte en responsive */
+@media (max-width: 700px) {
+  .gtb-btn-quitar {
+    min-width: 80px !important;
+    width: auto !important;
+    font-size: 1.08rem !important;
+    padding: 12px 0 !important;
+    border-radius: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: normal;
+    white-space: nowrap;
+    text-overflow: initial;
+    overflow: visible;
+  }
+}

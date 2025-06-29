@@ -1,0 +1,62 @@
+.gtb-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(42,77,79,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.gtb-modal-content {
+  background: #fffbe9;
+  border-radius: 18px;
+  padding: 32px 28px 28px 28px;
+  min-width: 340px;
+  max-width: 520px;
+  box-shadow: 0 4px 32px 0 #d6cbb7;
+  position: relative;
+  border: 1.5px solid #e6dbc7;
+  font-family: "Segoe UI", Arial, sans-serif;
+  animation: gtb-modal-in 0.18s;
+}
+
+@keyframes gtb-modal-in {
+  from { transform: translateY(30px) scale(0.98); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.gtb-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: #e6dbc7;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  color: #2a4d4f;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #d6cbb7;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gtb-modal-close:hover {
+  background: #d6cbb7;
+}
+
+@media (max-width: 600px) {
+  .gtb-modal-content {
+    min-width: 0;
+    width: 96vw;
+    max-width: 98vw;
+    padding: 18px 6vw 18px 6vw;
+  }
+}

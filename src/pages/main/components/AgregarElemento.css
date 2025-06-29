@@ -1,0 +1,235 @@
+.gtb-form-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: #f5e8d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  overflow-y: auto;
+  /* Animación de entrada/salida */
+  animation: gtb-fadein 0.38s cubic-bezier(.4,1.4,.6,1) both;
+}
+
+@keyframes gtb-fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes gtb-fadeout {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+  }
+}
+
+.gtb-form-page.gtb-exit {
+  animation: gtb-fadeout 0.32s cubic-bezier(.4,1.4,.6,1) both;
+}
+
+.gtb-form-card {
+  background: #fffbe9;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px 0 #d6cbb7;
+  border: 1.5px solid #e6dbc7;
+  margin: 0;
+  width: 100%;
+  max-width: 420px;
+  min-width: 260px;
+  min-height: 0;
+  padding: 24px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  align-self: center;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+
+.gtb-form-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-bottom: 18px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.gtb-form-group label {
+  font-size: 1.08rem;
+  color: #2C2C2C;
+  font-weight: 500;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.gtb-form-group {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.gtb-form-input {
+  border: 1.2px solid #e6dbc7;
+  border-radius: 7px;
+  padding: 8px 10px;
+  font-size: 1.08rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  color: #2C2C2C;
+  transition: border 0.18s;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* El formulario interno ocupa todo el ancho del card */
+.gtb-form-modal {
+  width: 100%;
+  margin: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Ajusta los grupos y acciones para que ocupen todo el ancho */
+.gtb-form-group,
+.gtb-form-actions {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+.gtb-form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* Ajusta el botón de cerrar del modal para que no tape el borde */
+.gtb-modal-close-btn, .gtb-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: #e6dbc7;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  color: #2a4d4f;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #d6cbb7;
+  transition: background 0.2s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gtb-btn {
+  background: #3FA768 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 28px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0 auto;
+  display: block;
+  min-width: 120px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.gtb-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.gtb-btn:hover:enabled {
+  background: #338d56 !important;
+}
+
+/* Responsive: el card y el form ocupan el área del modal */
+@media (max-width: 900px) {
+  .gtb-form-card {
+    max-width: 98vw;
+    width: 100%;
+    margin: 0;
+    padding: 18px 2vw 18px 2vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .gtb-form-card {
+    max-width: 98vw;
+    min-width: 0;
+    border-radius: 8px;
+    margin: 0;
+    padding: 8px 2vw 12px 2vw;
+    box-shadow: 0 2px 10px 0 #e2d6c2;
+    align-self: center;
+  }
+  .gtb-form-title {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .gtb-form-modal {
+    max-width: 98vw;
+    padding: 0 2vw;
+    gap: 10px;
+  }
+  .gtb-form-actions {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+}
+  .gtb-form-card {
+    max-width: 98vw;
+    min-width: 0;
+    border-radius: 8px;
+    margin: 0;
+    padding: 8px 2vw 12px 2vw;
+    box-shadow: 0 2px 10px 0 #e2d6c2;
+    align-self: center;
+  }
+  .gtb-form-title {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+  }
+  .gtb-form-modal {
+    max-width: 98vw;
+    padding: 0 2vw;
+    gap: 10px;
+  }
+  .gtb-form-actions {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+}

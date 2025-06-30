@@ -59,19 +59,31 @@ function CardLogin() {
 
     return (
         <div>
-            <Card style={{ width: '23rem' }} className="mb-3 shadow-lg rounded-5">
+            <Card style={{ width: '23rem' }} className="mb-3 shadow-lg rounded-5 card_login">
                 <Card.Body>
                     <Card.Title className="mb-3 text-center" >Inicio de Sesion</Card.Title>
-                    <Card.Subtitle className="mb-3 text-muted text-center">Sistema de Gestion</Card.Subtitle>
+                    <Card.Subtitle className="mb-3 text-center ">
+
+                        <code className='text-light'>Sistema de Gestion</code><br />
+                        
+                    </Card.Subtitle>
                     <Form onSubmit={onSubmit}>
                         <Form.Group className="mb-3" controlId="email">
-                            <Form.Control type="email"
+                          
+
+                             <InputGroup>
+                               <Form.Control type="email"
                                 name='email'
                                 value={user.email}
                                 maxLength={35}
                                 onChange={oninputchange}
                                 placeholder="Introduce tu correo electronico"
                             />
+                                <InputGroup.Text style={{ cursor: 'pointer' }}>
+                                    <i className="bi bi-person"></i>
+                                </InputGroup.Text>
+                            </InputGroup>
+                            
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="password">
                             <InputGroup>
@@ -88,10 +100,10 @@ function CardLogin() {
 
                         </Form.Group>
                         <Form.Group  className="text-center" >
-                            <label className="mb-3 ">No tienes cuenta aún ? <a href='#' onClick={Abrirmodal}>Registrate!</a></label>
+                            <label className="mb-3 ">No tienes cuenta aún ? <a href='#' className="text-light" onClick={Abrirmodal}>Registrate!</a></label>
                         </Form.Group>
                         <div className='d-flex justify-content-center'>
-                        <Button className="mb-3" variant="success" type="submit">
+                        <Button className="mb-3 success" variant="outline-light" type="submit">
                             Confirmar
                         </Button>
                         </div>

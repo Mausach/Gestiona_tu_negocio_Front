@@ -1,5 +1,24 @@
 body {
     min-height: 100vh;
-    background:linear-gradient(to right,#FAFAFA,#E8F1F5);
+    background-color: #F5E8D5;
+      /*background:linear-gradient(to right,#F5E8D5,#FAF1E6);*/
+    
     overflow-x: hidden;
   }
+
+  /* SidebarOffcanvas.css */
+
+.offcanvas {
+  background:linear-gradient(to right,#135D66,#003C43)!important;
+  color: white;
+}
+
+.custom-offcanvas .btn-close {
+  filter: brightness(0) invert(1); /* Convierte el ícono a blanco */
+}
+
+.card_login{
+   background:linear-gradient(to right,#135D66,#003C43);
+  color: white;
+}
+

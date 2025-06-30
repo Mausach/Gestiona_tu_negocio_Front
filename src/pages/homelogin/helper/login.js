@@ -7,7 +7,7 @@ export const starLogin = async(email,password,navigate)=> {
         localStorage.setItem('token',resp.data.token);
         console.log(resp)
         if (resp.data.usuario.rol === "usuario") {
-            navigate("/main",{
+            navigate("/report-main",{
                 state:resp.data.usuario
             }) 
 

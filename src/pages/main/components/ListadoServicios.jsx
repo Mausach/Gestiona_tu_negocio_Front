@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ModificarElemento from "./ModificarElemento";
+import ModificarElemento from "./modificarElemento";
 import EliminarElemento from "./EliminarElemento";
 import AgregarElemento from "./AgregarElemento";
 import Modal from "./Modal";

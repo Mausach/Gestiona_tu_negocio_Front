@@ -93,42 +93,67 @@ function ModalRegistro({ modalabierto, setModalabierto }) {
     return (
         <div>
             <Modal className="" show={modalabierto} onHide={Cerrarmodal} centered>
-                <Form className="mb-3" onSubmit={onSubmit}>
+                <Form className=" card_login" onSubmit={onSubmit}>
                     <Modal.Header>
                         <div className="w-100 text-center">
-                        <Modal.Title>Formulario de Registro</Modal.Title>
+                            <Modal.Title>Formulario de Registro</Modal.Title>
                         </div>
                     </Modal.Header>
                     <ModalBody>
                         <Form.Group className="mb-3" controlId="nombre">
-                            <Form.Control
-                                type="text"
-                                placeholder="Introduce tu nombre"
-                                name='nombre'
-                                maxLength={20}
-                                value={user.nombre}
-                                onChange={oninputchange}
-                            />
+
+
+                            <InputGroup>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Introduce tu nombre"
+                                    name='nombre'
+                                    maxLength={20}
+                                    value={user.nombre}
+                                    onChange={oninputchange}
+                                />
+                                <InputGroup.Text style={{ cursor: 'pointer' }}>
+                                    <i className="bi bi-person"></i>
+                                </InputGroup.Text>
+                            </InputGroup>
+
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="apellido">
-                            <Form.Control
-                                type="text"
-                                placeholder="Introduce tu apellido"
-                                name='apellido'
-                                maxLength={20}
-                                value={user.apellido}
-                                onChange={oninputchange}
-                            />
+
+
+
+                            <InputGroup>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Introduce tu apellido"
+                                    name='apellido'
+                                    maxLength={20}
+                                    value={user.apellido}
+                                    onChange={oninputchange}
+                                />
+                                <InputGroup.Text style={{ cursor: 'pointer' }}>
+                                    <i className="bi bi-person"></i>
+                                </InputGroup.Text>
+                            </InputGroup>
+
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="email">
-                            <Form.Control
-                                type="email"
-                                placeholder="Introduce tu correo electronico"
-                                name='email'
-                                maxLength={35}
-                                value={user.email}
-                                onChange={oninputchange}
-                            />
+
+
+                            <InputGroup>
+                                <Form.Control
+                                    type="email"
+                                    placeholder="Introduce tu correo electronico"
+                                    name='email'
+                                    maxLength={35}
+                                    value={user.email}
+                                    onChange={oninputchange}
+                                />
+
+                                <InputGroup.Text style={{ cursor: 'pointer' }}>
+                                    <i className="bi bi-person"></i>
+                                </InputGroup.Text>
+                            </InputGroup>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="password">
@@ -165,7 +190,7 @@ function ModalRegistro({ modalabierto, setModalabierto }) {
 
                     </ModalBody>
                     <Modal.Footer>
-                        <Button variant="success" type="submit">
+                        <Button variant="outline-light" type="submit">
                             Confirmar
                         </Button>
                         <Button onClick={Cerrarmodal} className="d-flex justify-content-end" variant="danger">

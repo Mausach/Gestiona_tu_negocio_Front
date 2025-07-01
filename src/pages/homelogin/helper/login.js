@@ -1,26 +1,28 @@
 import Swal from 'sweetalert2';
 import authApi from '../../../api/authApi';
 
-export const starLogin = async(email,password,navigate)=> {
+export const starLogin = async (email, password, navigate) => {
     try {
-        const resp = await authApi.post('/auth/login',{email,password})
-        localStorage.setItem('token',resp.data.token);
+        const resp = await authApi.post('/auth/login', { email, password })
+        localStorage.setItem('token', resp.data.token);
         console.log(resp)
         if (resp.data.usuario.rol === "usuario") {
-            navigate("/main",{
-                state:resp.data.usuario
-            }) 
-
+            sessionStorage.setItem('usuario', JSON.stringify(resp.data.usuario));
+            navigate("/report-main", {
+                state:resp.data.usuario, // Objeto completo
+                    
+            });
         }
-        else if (resp.data.usuario.rol === "creador"){
-            navigate("/admin",{
-                state:resp.data.usuario
+        //cambiar para que funcione como arriba
+        else if (resp.data.usuario.rol === "creador") {
+            navigate("/admin", {
+                state: resp.data.usuario
             })
         }
-        else{
-        navigate("/*")
+        else {
+            navigate("/*")
         }
-        
+
 
     } catch (error) {
         console.log(error)

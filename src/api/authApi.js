@@ -1,5 +1,7 @@
 import axios from "axios";
-export const authApi = axios.create({baseURL:"http://localhost:3000/"})
+//http://localhost:4008 //test local
+//https://gestiona-tu-negocio-back.onrender.com/
+export const authApi = axios.create({baseURL:"https://gestiona-tu-negocio-back.onrender.com"})
 authApi.interceptors.request.use((config)=>{
     config.headers = {
         'x-token':localStorage.getItem('token')

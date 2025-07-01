@@ -1,5 +1,39 @@
 body {
-    min-height: 100vh;
-    background:linear-gradient(to right,#FAFAFA,#E8F1F5);
-    overflow-x: hidden;
-  }
+  min-height: 100vh;
+  background-color: #f2e4c7;
+  /*background:linear-gradient(to right,#F5E8D5,#FAF1E6);*/
+
+  overflow-x: hidden;
+}
+
+/* SidebarOffcanvas.css */
+
+.offcanvas {
+  background: linear-gradient(to right, #135D66, #003C43) !important;
+  color: white;
+}
+
+.custom-offcanvas .btn-close {
+  filter: brightness(0) invert(1);
+  /* Convierte el ícono a blanco */
+}
+
+.card_login {
+  background: linear-gradient(to right, #135D66, #003C43);
+  color: white;
+}
+
+.card_report {
+  background-color: #F8F1E5;
+  color: black;
+}
+
+.card_greem {
+  background-color: #548857;
+  color: #F8F1E5;
+}
+
+.card_stock {
+  background-color: #eb9f63;
+  color: #F8F1E5;
+}

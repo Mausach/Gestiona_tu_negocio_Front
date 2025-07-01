@@ -1,5 +1,5 @@
 body, .principal-bg {
-  background: #F5E8D5;
+  background: #f2e4c7;
   color: #2C2C2C;
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
@@ -58,7 +58,7 @@ body, .principal-bg {
   display: inline-block;
 }
 .gtb-btn:hover {
-  background: #338d56;
+  background: #548857;
 }
 .gtb-btn-secondary {
   background: #fff !important;

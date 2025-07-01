@@ -51,8 +51,10 @@ const ListadoServicios = ({ usuarioId, refreshKey: externalRefreshKey = 0 }) => 
     <div>
       <h2 className="gtb-list-title">Listado de Servicios</h2>
       <div className="gtb-list-actions">
-        <button className="gtb-btn" onClick={() => setAgregando(true)}>Agregar Servicio</button>
-        <button className="gtb-btn gtb-btn-secondary" onClick={() => setInactivosOpen(true)}>Ver Servicios Inactivos</button>
+        <button className="gtb-btn p-2" onClick={() => setAgregando(true)}> + Agregar Servicio</button>
+        <button className="gtb-btn gtb-btn-secondary p-2" onClick={() => setInactivosOpen(true)}> 
+          <i className="bi bi-eye-fill"> </i>
+          Ver Servicios Inactivos</button>
       </div>
       <Modal open={!!editando} onClose={() => { setEditando(null); setMenuId(null); }}>
         {editando && (

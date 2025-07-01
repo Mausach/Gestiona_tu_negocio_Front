@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ModificarElemento from "./ModificarElemento";
+//import ModificarElemento from "./ModificarElemento";
 import EliminarElemento from "./EliminarElemento";
 import AgregarElemento from "./AgregarElemento";
 import Modal from "./Modal";
@@ -7,6 +7,7 @@ import ModificarStockAgotado from "./ModificarStockAgotado";
 import { authApi } from "../../../api/authApi";
 import PropTypes from "prop-types";
 import ListadoInactivoProductos from "./ListadoInactivoProductos";
+import ModificarElemento from "./ModificarElemento";
 
 const ListadoProductos = ({ usuarioId, refreshKey: externalRefreshKey = 0 }) => {
   const [productos, setProductos] = useState([]);

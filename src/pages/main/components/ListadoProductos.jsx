@@ -7,7 +7,8 @@ import ModificarStockAgotado from "./ModificarStockAgotado";
 import { authApi } from "../../../api/authApi";
 import PropTypes from "prop-types";
 import ListadoInactivoProductos from "./ListadoInactivoProductos";
-import ModificarElemento from "./modificarElemento";
+import ModificarElemento from "./ModificarElemento";
+
 
 const ListadoProductos = ({ usuarioId, refreshKey: externalRefreshKey = 0 }) => {
   const [productos, setProductos] = useState([]);
